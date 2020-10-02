@@ -1,0 +1,108 @@
+<div class="container">
+    <h2>Recently added</h2>
+    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            {{#each movies.newMovies}}
+            <li data-target="#carouselExampleIndicators" class="slide-number" data-slide-to="{{@index}}"></li>
+            {{/each}}
+
+        </ol>
+        <div class="carousel-inner">
+            {{#each movies.newMovies}}
+            <div class="carousel-item">
+                <img src="/images/CaptainAmerica.jpg" alt="First Slide" width="100%" height="500">
+                <div class="carousel-caption d-none d-md-block">
+                    <a href="detail/{{this.ID}}" class="text-white">
+                        <h2><strong>{{this.TITLE}}</strong></h2>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-5 shadow-box">
+            <h2>Most Seen</h2>
+            <br />
+            <ul>
+                {{#each movies.mostSeen}}
+                <li>
+                    <div class="list-movies">
+                        <div class="movie-image">
+                            <input type="hidden" value="{{this.MOVIE_ID}}" name="movieId" />
+                            <a class="movieImageList" alt="video" data-toggle="modal" data-target="#modal1"
+                                onclick="moviePlayed(this)">
+                                <img class="img-responsive img-fluid z-depth-1" width="100%"
+                                    src="/images/HarryPotterOne.jpg">
+                            </a>
+                        </div>
+                        <div class="movie-title">
+                            <a href="detail/{{this.MOVIE_ID}}"> {{this.TITLE}}</a>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+        <div class="col-2"></div>
+        <div class="col-5 shadow-box">
+            <h2>Best ranked</h2>
+            <br />
+            <ul>
+                {{#each movies.bests}}
+                <li>
+                    <div class="list-movies">
+                        <div class="movie-image">
+                            <input type="hidden" value="{{this.externalId}}" name="movieId" />
+                            <a class="movieImageList" alt="video" data-toggle="modal" data-target="#modal1"
+                             onclick="moviePlayed(this)">
+                                <img class="img-responsive img-fluid z-depth-1" width="100%"
+                                    src="/images/HarryPotterOne.jpg">
+                            </a>
+                        </div>
+                        <div class="movie-title">
+                            <a href="detail/{{this.externalId}}"> {{this.title}}</a>
+                        </div>
+                    </div>
+                </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    
+</div>
+
+<!--Modal: Name-->
+<div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+
+        <!--Content-->
+        <div class="modal-content">
+
+            <!--Body-->
+            <div class="modal-body mb-0 p-0">
+
+                <div class="embed-responsive embed-responsive-16by9 z-depth-1-half">
+                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/A3PDXmYoF5U"
+                        onStateChange="onPlayerStateChange" allowfullscreen></iframe>
+                </div>
+
+            </div>
+
+        </div>
+        <!--/.Content-->
+
+    </div>
+</div>
+<!--Modal: Name-->

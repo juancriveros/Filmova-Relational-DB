@@ -1,0 +1,180 @@
+
+.login{
+    background-image: url('../images/movies-back.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
+    font-family: 'Numans', sans-serif;
+    }
+    
+    .container{
+    height: 100%;
+    align-content: center;
+    }
+    
+    .card{
+    height: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: #47515b !important;
+    }
+
+    
+    .social_icon span{
+    font-size: 60px;
+    margin-left: 10px;
+    color: #bd2130;;
+    }
+    
+    .social_icon span:hover{
+    color: white;
+    cursor: pointer;
+    }
+    
+    .card-header h3{
+    color: white;
+    }
+    
+    .social_icon{
+    position: absolute;
+    right: 20px;
+    top: -45px;
+    }
+    
+    .input-group-prepend span{
+    width: 50px;
+    background-color: #bd2130;;
+    color: black;
+    border:0 !important;
+    }
+    
+    input:focus{
+    outline: 0 0 0 0  !important;
+    box-shadow: 0 0 0 0 !important;
+    
+    }
+    
+    .remember{
+    color: white;
+    }
+    
+    .remember input
+    {
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    margin-right: 5px;
+    }
+    
+    .login_btn{
+    color: white;
+    background-color: #bd2130;;
+    width: 100px;
+    }
+    
+    .login_btn:hover{
+    color: black;
+    background-color: white;
+    }
+    
+    .links{
+    color: white;
+    }
+    
+    .links a{
+    margin-left: 4px;
+    }
+
+    /* Sign in form */
+
+    .sign-card{
+        height: 80%;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 80%;
+        background-color: #47515b !important;
+        overflow: scroll;
+        overflow-x: hidden;
+    }
+
+    .sign-form{
+        padding: 20px;
+    }
+
+    .sign-form label{
+        color: white;
+    }
+
+    .form-group .form-check{
+        padding-left: 2.5rem;
+    }
+
+    .shadow-box{
+        border: 1px solid #e0e1e0;
+    background: #fff;
+    box-shadow: 0px 0px 8px 0px;
+    -webkit-transition: box-shadow .5s;
+    transition: box-shadow .5s;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    ul li{
+        padding: 5px;
+    }
+    .movie-image{
+        width: 20%;
+        min-width: 20%;
+    }
+
+    .list-movies{
+        display: flex;
+        text-align: center;
+    }
+
+    .movie-title{
+        margin: auto;
+        padding-left: 10px;
+        cursor: pointer;
+    }
+
+    .movieImageList {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .movieImageList::before {
+        content: '\f144';
+        z-index: 5;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate( -50%, -50% );
+        color: white;
+        font-family: 'Font Awesome 5 Free';
+        font-size: 40px !important;
+        border-radius: 5px 5px 5px 5px;
+    }
+
+    .rating{
+        width: 100%;
+        height: auto;
+        background-color: white !important;
+    }
+
+    .twitterCard {
+        background: grey;
+        color: white;
+        margin-top: 5px;
+        height: auto !important;
+    }
+
+    .card-header{
+        display: flex;
+        display: inline-flex;
+        width: 100%;
+    }
